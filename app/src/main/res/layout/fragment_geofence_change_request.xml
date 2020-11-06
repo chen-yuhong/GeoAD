@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/changeRequestTitle"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75sp"
+        android:textStyle="bold"
+        android:text="Request Change"
+        android:textSize="36sp"/>
+
+    <TextView
+        android:id="@+id/fenceNameText"
+        android:layout_width="275sp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/changeRequestTitle"
+        android:layout_below="@id/changeRequestTitle"
+        android:layout_marginTop="35sp"
+        android:text="@string/which_fence_text"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/nameSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/fenceNameText"
+        android:entries="@array/geofence_list"
+        android:layout_marginTop="30sp"
+        android:layout_alignStart="@id/fenceNameText"/>
+
+    <TextView
+        android:id="@+id/fenceSizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/nameSpinner"
+        android:layout_below="@id/nameSpinner"
+        android:layout_marginTop="30sp"
+        android:text="@string/request_edit_type_text"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/fenceSizeText"
+        android:entries="@array/change_type"
+        android:layout_marginTop="30sp"
+        android:layout_alignStart="@id/fenceSizeText"/>
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/typeSpinner"
+        android:layout_alignStart="@id/typeSpinner"
+        android:layout_marginTop="30sp"
+        android:text="@string/change_text"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/addressTextBox"
+        android:layout_width="275sp"
+        android:layout_height="45sp"
+        android:layout_below="@id/addressText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:ems="10"
+        android:hint="@string/new_address_text_hint"
+        android:inputType="textNoSuggestions" />
+
+    <Button
+        android:id="@+id/submitChangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:layout_below="@id/addressTextBox"
+        android:text="@string/submit_text" />
+
+</RelativeLayout>
